@@ -65,3 +65,35 @@ npx cypress open
 ## Observações
 
 Projeto desenvolvido como parte de desafio técnico para avaliação de conhecimentos em QA, contemplando automação de testes Web e API.
+
+---
+
+## Teste de Performance (JMeter)
+
+Foi realizado um teste de carga utilizando o Apache JMeter para validar o comportamento da aplicação sob múltiplos acessos simultâneos.
+
+### Cenário testado
+- Endpoint: https://www.blazedemo.com
+- Método: GET
+- Usuários simultâneos: 50
+- Loop: 20 execuções por usuário
+- Total de requisições: 1000+
+
+### Resultado
+
+![Resultado do teste](./performance/resultado-performance.png)
+
+### Métricas observadas
+
+- Tempo médio de resposta: ~571 ms  
+- Tempo mínimo: 226 ms  
+- Tempo máximo: 3434 ms  
+- Taxa de erro: 0%  
+- Throughput: ~27 requisições por segundo  
+
+### Análise
+
+A aplicação apresentou estabilidade durante o teste, mantendo 0% de erro mesmo sob carga.  
+O tempo de resposta se manteve aceitável, com alguns picos isolados, o que pode indicar variações de rede ou processamento do servidor.
+
+---
